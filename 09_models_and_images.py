@@ -19,8 +19,10 @@ class ImageTexture:
         self.ctx = moderngl.get_context()
 
         img = Image.open(path).convert('RGBA')
+        img = img.transpose(Image.FLIP_TOP_BOTTOM)
         self.texture = self.ctx.texture(img.size, 4, img.tobytes())
         self.sampler = self.ctx.sampler(texture=self.texture)
+        
 
     def use(self):
         self.sampler.use()
@@ -106,7 +108,7 @@ class Scene:
             ''',
         )
 
-        self.texture = ImageTexture('examples/data/textures/crate.png')
+        self.texture = ImageTexture('examples/data/textures/tec_logo.png')
 
         self.car_geometry = ModelGeometry('examples/data/models/lowpoly_toy_car.obj')
         self.car = Mesh(self.program, self.car_geometry)

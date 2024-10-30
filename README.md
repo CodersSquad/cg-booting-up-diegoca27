@@ -20,16 +20,30 @@ This lab stands to prepare the moderngl development environment. Below the steps
 
 ## How to run your program
 
+Follow these steps to set up and run the project:
+
+### 1. Clone the Repository
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/CodersSquad/cg-booting-up-diegoca27
 ```
-# Update this section with instructions on how to run your programs. 
-
-# Consider that these instructions will be executed 
-in a completely new linux-based machine (Ubuntu 22.04),
-so, instructions for dependencies installation must be added.
-
-# It's highly recommended to use python virtual envs. 
-You may take a look on:
-https://docs.python.org/3/library/venv.html
+### 2. Then we navigate to the project directory
+```bash
+cd project-directory-name
+```
+### 3. We activate the virtual environment
+#### On Windows
+```bash
+.\env\Scripts\activate
+```
+#### On Linux/Mac
+```bash
+source venv/bin/activate
+```
+### 4. Run the program
+```bash
+program_name.py
 ```
 
 ## Grading Policy
